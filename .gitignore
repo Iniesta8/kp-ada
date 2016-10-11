@@ -1,0 +1,9 @@
+# Exclude BasisProject
+BasisProjekt/
+
+# Object file
+*.o
+objs/
+
+# Ada Library Information
+*.ali

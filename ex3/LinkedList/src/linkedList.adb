@@ -23,7 +23,7 @@ procedure linkedList is
 
   type ptr_lh is access list_head;
 
-  procedure insert (value : in integer; head : in out list_head) is
+  procedure insert (head : in out list_head; value : in integer) is
     tmp : ptr_le := new list_element'(value, null);
     help : ptr_le;
   begin
@@ -67,15 +67,16 @@ procedure linkedList is
     end loop;
   end print_list;
 
-  myList : list_head;
+  myList : list_head; -- TODO: allocate list_head maybe on heap
 begin
   -- insert some elements
-  insert(1, myList);
-  insert(-1, myList);
-  insert(1, myList);
-  insert(2, myList);
-  insert(-2, myList);
-  insert(0, myList);
+  insert(myList, 1);
+  insert(myList, -1);
+  insert(myList, 1);
+  insert(myList, 42);
+  insert(myList, 2);
+  insert(myList, -2);
+  insert(myList, 0);
 
   -- print out list information and elements
   put("Num of elements: "); put(myList.count); new_line;
@@ -86,7 +87,5 @@ begin
   put("Elements: "); new_line;
 
   print_list(myList);
-
-
 
 end linkedList;

@@ -48,15 +48,10 @@ package body Variable_Length255 is
       return Local_Object;
    end To_Variable_String;
 
-
-
    function "+" (Source : String) return Variable_String is
    begin
       return To_Variable_String (Source);
    end "+";
-
-
-
 
    procedure To_Variable_String (Source : in  String := "";
                                  Target : out Variable_String;
@@ -80,8 +75,6 @@ package body Variable_Length255 is
          end case;
       end if;
    end To_Variable_String;
-
-
 
    function "&" (Left : Variable_String; Right : String) return Variable_String is
       Result : Variable_String := Left;

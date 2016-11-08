@@ -22,38 +22,37 @@
 -------------------------------------------------------------------------------
 package body variable_length255.IO is
 
-procedure Get_Line (File : in  File_Type ;
-                    Item : out Variable_String )  is
-begin
-    Get_Line (File, Item.Content, Item.Length);
-end Get_Line;
+  procedure Get_Line (File : in  File_Type ;
+                      Item : out Variable_String )  is
+  begin
+      Get_Line (File, Item.Content, Item.Length);
+  end Get_Line;
 
-procedure Get_Line (Item : out Variable_String)  is
-begin
-    Get_Line (Item.Content, Item.Length);
-end Get_Line;
+  procedure Get_Line (Item : out Variable_String)  is
+  begin
+      Get_Line (Item.Content, Item.Length);
+  end Get_Line;
 
-procedure Put_Line (File : in File_Type ;
-                    Item : in Variable_String)  is
-begin
-   Put_Line (File, To_String (Item));
-end Put_Line;
+  procedure Put_Line (File : in File_Type ;
+                      Item : in Variable_String)  is
+  begin
+     Put_Line (File, To_String (Item));
+  end Put_Line;
 
-procedure Put_Line (Item : in Variable_String)  is
-begin
-   Put_Line (To_String (Item));
-end Put_Line;
+  procedure Put_Line (Item : in Variable_String)  is
+  begin
+     Put_Line (To_String (Item));
+  end Put_Line;
 
-procedure Put (File : in File_Type ;
-               Item : in Variable_String)  is
-begin
-   Put (File, To_String (Item));
-end Put;
+  procedure Put (File : in File_Type ;
+                 Item : in Variable_String)  is
+  begin
+     Put (File, To_String (Item));
+  end Put;
 
-procedure Put (Item : in Variable_String)  is
-begin
-   Put (To_String (Item));
-end Put;
+  procedure Put (Item : in Variable_String)  is
+  begin
+     Put (To_String (Item));
+  end Put;
 
 end variable_length255.IO;
-

@@ -39,7 +39,6 @@ package body MyList is
       help.next := tmp;
     end if;
     head.count := head.count + 1;
-
   end insert;
 
   procedure print_list (head : in list_head) is

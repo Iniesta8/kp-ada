@@ -35,7 +35,6 @@ package Variable_Length255 is
    pragma Pure (Variable_Length255);
    pragma Elaborate_Body;
 
-
    max : constant := 255;                -- added by TT
 
    type Variable_String is private;      -- changed by TT
@@ -82,11 +81,10 @@ package Variable_Length255 is
 
    Length_Error : exception renames Ada.Strings.Length_Error;
 
-private
+   private
    type Variable_String is                                    -- changed by TT
       record
          Length  : Natural := 0;
          Content : String (1 .. max);
       end record;
 end Variable_Length255;
-

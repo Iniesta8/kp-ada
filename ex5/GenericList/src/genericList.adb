@@ -10,7 +10,8 @@ procedure genericList is
   myListHead : list_head;
   bob : Person.Person := (name => To_Variable_String("Bob"), nr => 123);
   alice : Person.Person := (name => To_Variable_String("Alice"), nr => 345);
-  joseph : Person.Person := (name => To_Variable_String("Joseph"), nr => 123);
+  foo : Person.Person := (name => To_Variable_String("Foo"), nr => 123);
+  bar : Person.Person := (name => To_Variable_String("Bar"), nr => -42);
 
   firstPerson : Person.Person;
   lastPerson : Person.Person;
@@ -19,7 +20,8 @@ begin
   -- insert some persons
   insert(myListHead, bob);
   insert(myListHead, alice);
-  insert(myListHead, joseph);
+  insert(myListHead, foo);
+  insert(myListHead, bar);
 
   -- print out list information and elements
   put("Num of elements:"); put(get_length(myListHead)); new_line;

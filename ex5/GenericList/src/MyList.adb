@@ -49,7 +49,7 @@ package body MyList is
     end if;
 
     while help /= null loop
-      put(help.value); new_line;
+      put(help.value); put("  ");
       help := help.next;
     end loop;
   end print_list;

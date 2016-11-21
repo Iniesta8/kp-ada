@@ -9,7 +9,6 @@ generic
 
 package MyList is
 
-  type ptr_le is private;
   type list_head is private;
 
   procedure insert (head : in out list_head; value : in GenericListValue);

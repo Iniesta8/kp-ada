@@ -20,13 +20,12 @@ procedure Tasks is
   begin
     accept start;
     loop
-      if i mod 10 /= 0 then
-        put("Task 1: "); put(i); new_line;
-      else
-        i := 0;
-      end if;
-      i := i + 1;
-      delay(1.0);
+      for i in 1..10 loop
+        delay(1.0);
+        if i mod 10 /= 0 then
+          put("Task 1: "); put(i); new_line;
+        end if;
+      end loop;
     end loop;
   end tt1;
 
@@ -40,10 +39,10 @@ procedure Tasks is
   begin
     accept start;
     loop
+      delay(10.0);
       ts := Clock - start_time;
       d := To_Duration(ts);
       put("Task 2: "); put_line(Image(d, true));
-      delay(10.0);
     end loop;
   end tt2;
 

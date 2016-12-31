@@ -16,3 +16,9 @@ objs/
 
 # Ignore Ada library information
 *.ali
+
+# Ignore other stuff
+other/
+
+# Ignore Apple stuff
+.DS_Store
